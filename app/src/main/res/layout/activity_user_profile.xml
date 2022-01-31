@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="1dp"
+    android:scrollbars="vertical"
+    tools:context=".UserProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#FFDB29"
+            android:padding="20dp">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/user_profile"
+                app:civ_border_color="#FFDB29"
+                app:civ_shadow_color="#3f51b5"
+                app:civ_shadow_radius="10dp" />
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:fontFamily="@font/bungee"
+                android:includeFontPadding="false"
+                android:text="Azizul Hakim"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/profile_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:includeFontPadding="false"
+                android:text="aziz.swe71@gmail.com"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-100dp"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#FFDB29"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_payment_24" />
+
+                    <TextView
+                        android:id="@+id/payment_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/bungee"
+                        android:includeFontPadding="false"
+                        android:text="$100"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/payment_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/payment_level"
+                        android:layout_centerInParent="true"
+                        android:includeFontPadding="false"
+                        android:text="Balance"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#FFDB29"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_payment_24" />
+
+                    <TextView
+                        android:id="@+id/travel_guide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/bungee"
+                        android:includeFontPadding="false"
+                        android:text="6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/travel_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/travel_guide"
+                        android:layout_centerInParent="true"
+                        android:includeFontPadding="false"
+                        android:text="Guide Notes"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Full Name"
+                app:boxStrokeColor="#FFDB29"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="#757575">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/username_icon"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:text="Azizul Hakim"
+                    android:textColor="#757575">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="E-mail"
+                app:boxStrokeColor="#FFDB29"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="#757575">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/email"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:text="aziz.swe71@gmail.com"
+                    android:textColor="#757575">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneNo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Phone Number"
+                app:boxStrokeColor="#FFDB29"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="#757575">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/phone_icon"
+                    android:drawablePadding="10dp"
+                    android:inputType="phone"
+                    android:text="+8801789398972"
+                    android:textColor="#757575">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Password"
+                app:boxStrokeColor="#FFDB29"
+                app:boxStrokeWidth="2dp"
+                app:passwordToggleEnabled="true"
+                app:hintTextColor="#757575">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/password_icon"
+                    android:drawablePadding="10dp"
+                    android:inputType="textPassword"
+                    android:text="13135395"
+                    android:textColor="#757575">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFDB29"
+                android:fontFamily="@font/bungee"
+                android:onClick="update"
+                android:text="update"
+                android:textColor="#756413" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
